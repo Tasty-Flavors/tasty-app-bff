@@ -1,0 +1,6 @@
+rootProject.name = 'tasty-app-bff'
+
+include 'contract'
+include 'impl'
+include 'integration'
+include 'common'
