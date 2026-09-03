@@ -19,7 +19,7 @@ cors:
 
 openFeign:
   restaurante-service:
-    url: http://localhost:8080
+    url: http://localhost:3000/tasty-api-service
     name: TastyService
   autenticacao-service:
     url: http://localhost:8085
