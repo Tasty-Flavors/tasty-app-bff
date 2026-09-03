@@ -35,7 +35,6 @@ public class JWTValidarFilter extends OncePerRequestFilter {
                 var auth = authenticationManager.authenticate(create(null, header));
                 SecurityContextHolder.getContext().setAuthentication(auth);
                 request.setAttribute("sub", extraiSub(auth));
-                request.setAttribute("id", extraiId(auth));
             } catch (AuthenticationException e) {
                 SecurityContextHolder.clearContext();
                 response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
@@ -47,10 +46,7 @@ public class JWTValidarFilter extends OncePerRequestFilter {
     }
 
     private Integer extraiSub(Authentication auth) {
-        return Integer.valueOf((String) auth.getPrincipal());
-    }
-
-    private Integer extraiId(Authentication auth) {
-        return Integer.valueOf((String) auth.getPrincipal());
+        var sub = (String) auth.getPrincipal();
+        return Integer.valueOf(sub);
     }
 }

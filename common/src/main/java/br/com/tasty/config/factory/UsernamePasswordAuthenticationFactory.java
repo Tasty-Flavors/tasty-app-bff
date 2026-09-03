@@ -9,7 +9,6 @@ import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class UsernamePasswordAuthenticationFactory {
-
     private static final int BEGIN_TOKEN_INDEX = 7;
 
     public static UsernamePasswordAuthenticationToken create(String codigoUsuario) {
@@ -21,9 +20,6 @@ public class UsernamePasswordAuthenticationFactory {
     }
 
     public static UsernamePasswordAuthenticationToken create(Object principal, String token) {
-        return new UsernamePasswordAuthenticationToken(
-                principal,
-                token.substring(BEGIN_TOKEN_INDEX)
-        );
+        return new UsernamePasswordAuthenticationToken(principal, token.substring(BEGIN_TOKEN_INDEX));
     }
 }

@@ -13,6 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface RestauranteFeign {
 
     @GetMapping("/v1/restaurante/dashboard")
-    RestauranteResponseIntegration dashboard(@RequestParam("codigoUsuario")  Integer codigoUsuario);
+    RestauranteResponseIntegration dashboard(@RequestParam("codigoUsuario") Integer codigoUsuario);
 
 }

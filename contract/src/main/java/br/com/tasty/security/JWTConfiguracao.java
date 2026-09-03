@@ -32,16 +32,13 @@ public class JWTConfiguracao {
     private final CorsProperties corsProperties;
 
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration)
-            throws Exception {
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(
-            HttpSecurity http,
-            AuthenticationManager authenticationManager) throws Exception {
-
+    public SecurityFilterChain securityFilterChain(HttpSecurity http,
+                                                   AuthenticationManager authenticationManager) throws Exception {
         var jwtValidarFilter = new JWTValidarFilter(authenticationManager);
 
         http
@@ -49,14 +46,13 @@ public class JWTConfiguracao {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers(EndpointRequest.toAnyEndpoint()).permitAll()
+                        .requestMatchers("/error").permitAll()
                         .requestMatchers(
                                 "/swagger-resources/**",
                                 "/swagger-ui.html",
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**",
-                                "/webjars/**",
-                                "/v1/cep/**",
-                                "/error"
+                                "/webjars/**"
                         ).permitAll()
                         .anyRequest().authenticated()
                 )
@@ -72,14 +68,12 @@ public class JWTConfiguracao {
 
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
-
         var corsConfiguration = new CorsConfiguration();
 
         log.info("CORS permitidos: {}", corsProperties.getOrigem());
 
         corsConfiguration.setAllowedOriginPatterns(corsProperties.getOrigem());
-        corsConfiguration.setAllowedMethods(
-                List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
+        corsConfiguration.setAllowedMethods(List.of("GET","POST","PUT","DELETE","OPTIONS","PATCH"));
         corsConfiguration.setAllowedHeaders(List.of("*"));
         corsConfiguration.setAllowCredentials(true);
 
