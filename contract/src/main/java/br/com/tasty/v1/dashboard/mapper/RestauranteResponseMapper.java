@@ -14,6 +14,8 @@ public class RestauranteResponseMapper {
                 .nomeEstabelecimento(restauranteResponseIntegration.nomeEstabelecimento())
                 .email(restauranteResponseIntegration.email())
                 .role(restauranteResponseIntegration.role())
+                .descricao(restauranteResponseIntegration.descricao())
+                .imagem(restauranteResponseIntegration.imagem())
                 .build();
     }
 
