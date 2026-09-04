@@ -13,6 +13,7 @@ public record RestauranteResponseIntegration(
         String role,
         Boolean ativo,
         String imagem,
+        String descricao,
         EnderecoResponse endereco
 ) {
 }
