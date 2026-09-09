@@ -10,7 +10,7 @@ FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 
-COPY --from=build /app/build/libs/tasty-auth-service.jar app.jar
+COPY --from=build /app/build/libs/tasty-app-bff.jar app.jar
 
 EXPOSE 8081
 
