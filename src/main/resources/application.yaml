@@ -2,7 +2,7 @@ spring:
   application:
     name: tasty-app-bff
   profiles:
-    active: dev
+    active: hml
   main:
     allow-bean-definition-overriding: true
 

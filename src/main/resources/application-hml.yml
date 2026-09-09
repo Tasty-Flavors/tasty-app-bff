@@ -1,0 +1,32 @@
+token:
+  password: 7b2e3f8a5d1c9f6e4a8b2c7d9e1f5a3b6c8d0e2f4a6b8c1d3e5f7a9b2c4d6e8
+  expiration: 86400000
+
+spring:
+  datasource:
+    url: jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:6543/postgres?sslmode=require
+    username: postgres.iykjkcorptulnxbathkc
+    password: XFQsA89tc3ljpM7e
+    driver-class-name: org.postgresql.Driver
+  output:
+    ansi:
+      enabled: ALWAYS
+
+cors:
+  origem:
+    - https://tasty-app-frontend-hml-git-hml-felipe-lafins-projects.vercel.app
+    - https://tasty-app-frontend-6v6gipck9-felipe-lafins-projects.vercel.app
+
+openFeign:
+  restaurante-service:
+    url: https://tasty-api-service.fly.dev/tasty-api-service
+    name: TastyService
+  autenticacao-service:
+    url: https://tasty-auth-service.fly.dev
+    name: TastyAuthService
+  pedido-service:
+    url:
+    name: PedidoService
+  viacep-service:
+    url: https://viacep.com.br/ws
+    name: ViaCepService
