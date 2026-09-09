@@ -12,6 +12,6 @@ WORKDIR /app
 
 COPY --from=build /app/build/libs/tasty-auth-service.jar app.jar
 
-EXPOSE 8085
+EXPOSE 8081
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
