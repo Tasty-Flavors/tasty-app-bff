@@ -14,8 +14,7 @@ spring:
 
 cors:
   origem:
-    - https://tasty-app-frontend-hml-git-hml-felipe-lafins-projects.vercel.app
-    - https://tasty-app-frontend-6v6gipck9-felipe-lafins-projects.vercel.app
+    - https://tasty-app-bff.fly.dev
 
 openFeign:
   restaurante-service:
