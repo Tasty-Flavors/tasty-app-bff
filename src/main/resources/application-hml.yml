@@ -18,8 +18,8 @@ cors:
 
 openFeign:
   restaurante-service:
-    url: https://tasty-api-service.fly.dev/tasty-api-service
-    name: TastyService
+    url: https://tasty-api-service.fly.dev
+    name: TastyApiService
   autenticacao-service:
     url: https://tasty-auth-service.fly.dev
     name: TastyAuthService
