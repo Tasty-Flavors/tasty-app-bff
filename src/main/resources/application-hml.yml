@@ -16,6 +16,7 @@ cors:
   origem:
     - https://tasty-para-restaurantes.vercel.app
     - https://tasty-app-frontend-hml-git-hml-felipe-lafins-projects.vercel.app
+    - https://tasty-app-bff.fly.dev
 
 openFeign:
   restaurante-service:
