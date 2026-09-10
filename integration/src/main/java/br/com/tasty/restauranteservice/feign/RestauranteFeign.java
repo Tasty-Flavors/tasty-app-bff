@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 )
 public interface RestauranteFeign {
 
-    @GetMapping("/v1/restaurante/dashboard")
-    RestauranteResponseIntegration dashboard(@RequestParam("codigoUsuario") Integer codigoUsuario);
+    @GetMapping("/tasty-api-service/v1/restaurante/dashboard")
+    RestauranteResponseIntegration dashboard(@RequestParam("sub") Integer codigoUsuario);
 
 }
