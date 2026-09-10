@@ -2,11 +2,12 @@ spring:
   application:
     name: tasty-app-bff
   profiles:
-    active: hml
+    active: ${PROFILE_ACTIVE:dev}
   main:
     allow-bean-definition-overriding: true
 
 server:
+  address: 0.0.0.0
   port: 8081
   servlet:
     contextPath: /tasty-app-bff
