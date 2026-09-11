@@ -31,3 +31,4 @@ common/build/
 contract/build/
 impl/build/
 integration/build/
+.env
