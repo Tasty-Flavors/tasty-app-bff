@@ -16,14 +16,13 @@ cors:
   origem:
     - https://tasty-para-restaurantes.vercel.app
     - https://tasty-app-frontend-hml-git-hml-felipe-lafins-projects.vercel.app
-    - https://tasty-app-bff.fly.dev
 
 openFeign:
-  restaurante-service:
-    url: https://tasty-api-service.fly.dev
+  tasty-api-service:
+    url: https://tasty-api-service.fly.dev/
     name: TastyApiService
-  autenticacao-service:
-    url: https://tasty-auth-service.fly.dev
+  tasty-auth-service:
+    url: https://tasty-auth-service.fly.dev/
     name: TastyAuthService
   pedido-service:
     url:
